@@ -26,7 +26,7 @@ def tea_bags(people: int) -> int:
 
 def treats(people: int) -> int:
     """Function for number of treats."""
-    return int(tea_bags(people) * 1.5)  # Calculate the number of treats needed.
+    return int(tea_bags(people=people) * 1.5)  # Calculate the number of treats needed.
 
 
 # This function assumes for each tea a guest drinks,
