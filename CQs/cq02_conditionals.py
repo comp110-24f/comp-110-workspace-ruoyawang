@@ -3,7 +3,7 @@
 __author__: str = "730526115"
 
 
-def guess_a_number(x: int) -> None:
+def guess_a_number() -> None:
     secret: int = 7
     x = int(input("Guess a number:"))
     print("Your guess was " + str(x))
