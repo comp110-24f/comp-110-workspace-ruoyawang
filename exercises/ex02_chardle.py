@@ -1,6 +1,6 @@
 """EX02 - Chardle - A cute step toward Wordle."""
 
-__author__ = "1234567890"
+__author__: str = "1234567890"
 
 
 def input_word() -> str:  # no parameter and return a string
@@ -50,19 +50,20 @@ def contains_char(word: str, letter: str) -> None:  # two parameters returns non
         if letter == word[4]:
             print(letter + " found at index 4")
             count += 1
-    if count == 1:
-        # This evaluation of count value should be put after all our addings, otherwise the count will
-        # not be updated
-        print(str(count) + " instance of " + letter + " found in " + word)
-    elif count > 1:
-        print(str(count) + " instances of " + letter + " found in " + word)
-    else:
-        print("No instance of " + letter + " found in " + word)
+
+        if count == 1:
+            # This evaluation of count value should be put after all our addings, otherwise the count will
+            # not be updated
+            print(str(count) + " instance of " + letter + " found in " + word)
+        elif count > 1:
+            print(str(count) + " instances of " + letter + " found in " + word)
+        else:
+            print("No instance of " + letter + " found in " + word)
     # These are the three expressions
 
 
 def main() -> None:  # automatically handles all the function calls
-    return contains_char(word=input_word(), letter=input_letter())
+    contains_char(word=input_word(), letter=input_letter())
 
 
 if __name__ == "__main__":
