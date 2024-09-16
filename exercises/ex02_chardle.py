@@ -54,11 +54,11 @@ def contains_char(word: str, letter: str) -> None:  # two parameters returns non
         if count == 1:
             # This evaluation of count value should be put after all our addings, otherwise the count will
             # not be updated
-            print(str(count) + " instance of " + letter + " found in " + word)
+            print("1 instance of " + letter + " found in " + word)
         elif count > 1:
             print(str(count) + " instances of " + letter + " found in " + word)
     else:
-        print("No instance of " + letter + " found in " + word)
+        print("No instances of " + letter + " found in " + word)
     # These are the three expressions
 
 
