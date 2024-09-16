@@ -4,6 +4,7 @@ __author__: str = "730526115"
 
 
 def input_word() -> str:  # no parameter and return a string
+    """input_word function that ask for a 5-character word from users"""
     input_from_user: str = input("Enter a 5-character word: ")
     if (
         len(input_from_user) != 5
@@ -16,6 +17,7 @@ def input_word() -> str:  # no parameter and return a string
 
 
 def input_letter() -> str:  # no parameter and return a string
+    """input_letter function that ask for a single character from users"""
     input_from_user1: str = input("Enter a single character: ")
     if (
         len(input_from_user1) != 1
@@ -28,6 +30,7 @@ def input_letter() -> str:  # no parameter and return a string
 
 
 def contains_char(word: str, letter: str) -> None:  # two parameters returns none
+    """contains_char function that locates the letter in the word"""
     print("Searching for " + letter + " in " + word)
     count: int = 0
     # I would like the count to start as 0 so every time the letter appears in word
@@ -63,6 +66,7 @@ def contains_char(word: str, letter: str) -> None:  # two parameters returns non
 
 
 def main() -> None:  # automatically handles all the function calls
+    """main function that puts everything together"""
     contains_char(word=input_word(), letter=input_letter())
 
 
