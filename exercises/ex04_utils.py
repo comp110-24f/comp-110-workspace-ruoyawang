@@ -6,8 +6,11 @@ __author__: str = "730526115"
 # Function 1: all
 def all(my_list: list[int], num: int) -> bool:
     """A function indicating whether all the ints in the list are the same as the given int"""
-    index: int = 0  # set up an index to loop over a list
     condition: bool = True  # prepare for a return in bool
+    if len(my_list) == 0:
+        condition = False
+        return condition
+    index: int = 0  # set up an index to loop over a list
     while index < len(my_list):
         # loop through all items and stop when the index exceeds the total in a list
         if my_list[index] != num:
@@ -19,8 +22,7 @@ def all(my_list: list[int], num: int) -> bool:
             condition = True
             index += 1
         # if still True, run the item of the next index
-    if condition == True:
-        return condition
+    return condition
     # if True after looping over the list, then all numbers match the indicated number
 
 
@@ -30,7 +32,7 @@ def max(input: list[int]) -> int:
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     else:
-        index: int = 0  # set up an index to loop over a list
+        index: int = 1  # set up an index to loop over a list
         local_max = input[0]  # the initial largest item
         while index < len(input):
             if input[index] > local_max:
