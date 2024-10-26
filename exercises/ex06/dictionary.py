@@ -89,6 +89,3 @@ def update_attendance(input_dict: dict[str, list[str]], day: str, student: str) 
             student
         ]  # the new key(day) will pair with a student name for the first time
     return None
-
-
-attendance_log: dict = {"Monday": ["Vrinda", "Kaleb"], "Tuesday": ["Alyssa"]}
