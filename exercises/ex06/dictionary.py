@@ -81,9 +81,12 @@ def alphabetizer(input_list: list[str]) -> dict[str, list[str]]:
 def update_attendance(input_dict: dict[str, list[str]], day: str, student: str) -> None:
     """this function mutates and returns the input dictionary"""
     if day in input_dict:  # day of a week as key of input_dict. If it is already there
-        input_dict[day].append(
-            student
-        )  # then we add student directly to the list as the value of dict
+        if (
+            student not in input_dict[day]
+        ):  # to ensure the same student is not added twice
+            input_dict[day].append(
+                student
+            )  # then we add student directly to the list as the value of dict
     else:  # if the day is not there, we should initialize one
         input_dict[day] = [
             student
